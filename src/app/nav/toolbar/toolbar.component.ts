@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-toolbar',
@@ -6,7 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./toolbar.component.sass']
 })
 export class ToolbarComponent {
+  constructor(public Dialog:MatDialog){}
+  
+  
   openDialog(){
-    
+    this.Dialog.open(DialogComponent);
   }
 }

@@ -9,6 +9,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatDatepickerModule} from '@angular/material/datepicker'
 import {MatTableModule} from '@angular/material/table';
+import { MatSelectModule} from '@angular/material/select';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,6 +17,7 @@ import { ToolbarComponent } from './nav/toolbar/toolbar.component';
 import { CreateComponent } from './nav/create/create.component';
 import { DialogComponent } from './nav/dialog/dialog.component';
 import { TableComponent } from './main/table/table.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { TableComponent } from './main/table/table.component';
     MatDialogModule,
     MatSliderModule,
     MatDatepickerModule,
+    MatSelectModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],
