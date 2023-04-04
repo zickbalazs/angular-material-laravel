@@ -9,6 +9,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatDatepickerModule} from '@angular/material/datepicker'
 import {MatTableModule} from '@angular/material/table';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatSelectModule} from '@angular/material/select';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,6 +19,8 @@ import { CreateComponent } from './nav/create/create.component';
 import { DialogComponent } from './nav/dialog/dialog.component';
 import { TableComponent } from './main/table/table.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditComponent } from './main/edit/edit.component';
+import { DeleteComponent } from './main/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     ToolbarComponent,
     CreateComponent,
     DialogComponent,
-    TableComponent
+    TableComponent,
+    EditComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatSnackBarModule,
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,

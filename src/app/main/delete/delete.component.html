@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Delete Consumption #{{data.id}}?</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>ID</mat-label>
+        <input disabled matInput value="{{data.id}}">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Day</mat-label>
+        <input disabled matInput value="{{data.day}}">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Power Unit</mat-label>
+        <input disabled matInput value="{{data.powerunit}}">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>kWh</mat-label>
+        <input disabled matInput value="{{data.production}}">
+    </mat-form-field>
+</div>
+<mat-dialog-actions>
+    <button mat-icon-button (click)="Delete()" color="warn"><mat-icon>check</mat-icon></button>
+    <button mat-icon-button mat-dialog-close color="primary"><mat-icon>close</mat-icon></button>
+</mat-dialog-actions>

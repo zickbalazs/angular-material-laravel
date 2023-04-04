@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Power } from 'src/app/power';
 import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
@@ -9,9 +10,12 @@ import { DialogComponent } from '../dialog/dialog.component';
 })
 export class ToolbarComponent {
   constructor(public Dialog:MatDialog){}
-  
+  @Output() upload = new EventEmitter<Power>();  
   
   openDialog(){
-    this.Dialog.open(DialogComponent);
+    let dialog = this.Dialog.open(DialogComponent);
+    dialog.componentInstance.upload.subscribe((data)=>{
+      this.upload.emit(data);
+    })
   }
 }

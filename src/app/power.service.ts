@@ -11,7 +11,7 @@ export class PowerService {
   constructor(private http:HttpClient) { }
 
   GetAll():Observable<Power[]>{
-    return this.http.get('http://localhost:8000/consumptions') as Observable<Power[]>;
+    return this.http.get('http://localhost:8000/api/consumptions') as Observable<Power[]>;
   }
   Get(id:number):Observable<Power>{
     return this.http.get(`http://localhost:800/api/consumption/${id}`) as Observable<Power>;
